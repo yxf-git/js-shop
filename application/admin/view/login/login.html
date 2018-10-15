@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>金石教育后台管理中心</title>
+	<meta content="" />
+	<meta content=""  />
+	<meta name="robots" content="noindex,nofollow">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/login.css">
+	<script src="__PUBLIC__/admin/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+	<script src="__PUBLIC__/admin/js/jquery.backstretch.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			$.backstretch([
+						"__PUBLIC__/admin/images/1.jpg","__PUBLIC__/admin/images/4.jpg","__PUBLIC__/admin/images/2.jpg","__PUBLIC__/admin/images/3.jpg"	
+						], {
+						fade: 1000,
+						duration: 5000
+					}
+			);
+			top.$('.page-loading').remove();
+						$("#username").focus();
+					});
+
+		window.onload = function() {
+			if (!window.applicationCache) {
+				alert("后台要求浏览器支持HTML5，推荐使用Chrome或IE高版本浏览器");
+			}
+		}
+	</script>
+</head>
+
+
+<body class=" login">
+<div class="login_title">金石教育</div>
+<div class="content">
+	<form class="login-form" method="">
+		<h3 class="form-title">后台中心</h3>
+				<div class="form-group">
+					<input type="text" id="username" name="" placeholder="账号" required="required" /> 
+				</div>
+				<div class="form-group">
+					<input type="password" id="password" name="" placeholder="密码"  required="required"/>
+				</div>
+				<div class="form-actions">
+					<button type="submit" class="btn"> 登录 </button>
+				</div>
+	</form>
+</div>
+<div class="copyright">金石教育后台管理中心</div>
+
+</body>
+</html>
