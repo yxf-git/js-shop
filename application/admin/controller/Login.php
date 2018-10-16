@@ -30,9 +30,9 @@ class Login extends Controller
     //验证密码功能
     public function getpwd(){
       if ($_POST['user']=='1' && $_POST['pwd']=='2') {
-        return json_encode('msg'=>'登陆成功！','state'=>'1');  
+        return json_encode(array('msg'=>'登陆成功！','state'=>'1'));  
       }else{
-        return json_encode('msg'=>'登陆失败！','state'=>'2');
+        return json_encode(array('msg'=>'登陆失败！','state'=>'2'));
       }
     }
 
