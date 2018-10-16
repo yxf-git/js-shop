@@ -1,10 +1,10 @@
 <?php
+// header('Content-Type:application/json;charset=utf-8');
 namespace app\admin\controller;
 use think\Controller;
 use think\View;
 use think\Request;
 use think\Session;
-
 use \think\Db;
 
 
@@ -29,10 +29,12 @@ class Login extends Controller
 
     //验证密码功能
     public function getpwd(){
-      if ($_POST['user']=='1' && $_POST['pwd']=='2') {
-        return json_encode(array('msg'=>'登陆成功！','state'=>'1'));  
+      $request = request()->post();
+
+      if ($request['user']==='1' && $request['pwd']==='2') {
+        echo json_encode(array('msg'=>'登陆成功！','state'=>'1'));  
       }else{
-        return json_encode(array('msg'=>'登陆失败！','state'=>'2'));
+        echo json_encode(array('msg'=>'登陆失败！','state'=>'2'));
       }
     }
 
